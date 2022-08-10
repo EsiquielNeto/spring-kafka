@@ -24,6 +24,7 @@
 			<id>confluent</id>
 			<url>http://packages.confluent.io/maven/</url>
 		</repository>
+
 		<repository>
 			<id>jitpack.io</id>
 			<url>https://jitpack.io</url>
@@ -58,10 +59,10 @@
 
 		<!-- Piemok -->
 		<dependency>
-			<scope>test</scope>
 			<groupId>com.github.kattlo</groupId>
 			<artifactId>piemok-spring</artifactId>
 			<version>v0.12.0</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

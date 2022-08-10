@@ -20,9 +20,10 @@ public class CarProducer {
     }
 
     public void send(CarDTO carDTO) {
-        kafkaTemplate.send(topic, carDTO).addCallback(
-                success -> logger.info("Message send " + success.getProducerRecord().value()),
-                failure -> logger.info("Message failure " + failure.getMessage())
-        );
+        kafkaTemplate.send(topic, carDTO)
+                .addCallback(
+                        success -> logger.info("Message send " + success.getProducerRecord().value()),
+                        failure -> logger.info("Message failure " + failure.getMessage())
+                );
     }
 }
